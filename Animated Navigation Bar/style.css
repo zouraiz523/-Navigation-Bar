@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e91e63, #673ab7);
+}
+
+.navigation {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition-delay: 0.5s;
+}
+
+.navigation.active {
+  width: 600px;
+}
+
+.navigation.active li {
+  transition-delay: 0.75s;
+  transform: scale(1);
+}
+
+.navigation.active .toggleMenu {
+  background: #ff4181;
+  transition-delay: 0s;
+  width: 30px;
+  height: 30px;
+  transform: translateY(60px);
+}
+
+.navigation.active .toggleMenu:before {
+  background: #fff;
+  transform: translateY(0px) rotate(45deg) scale(0.6);
+  transition-delay: 0s;
+}
+
+.navigation.active .toggleMenu:after {
+  background: #fff;
+  transform: translateY(0px) rotate(-45deg) scale(0.6);
+  transition-delay: 0s;
+}
+
+.navigation li {
+  list-style: none;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.navigation li a:hover {
+  background: #ff4181;
+  color: #fff;
+}
+
+.navigation .toggleMenu {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  transition-delay: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation .toggleMenu:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigation .toggleMenu:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
